@@ -1,4 +1,4 @@
-package com.example.testlibrary;
+package com.example.lib;
 
 public interface IUserService {
     String login(String username, String password);

@@ -5,6 +5,8 @@ import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 
+import com.example.hxm.myapplication.model.PluginApk;
+
 /**
  * 代理Activity生命周期以及资源管理类
  */

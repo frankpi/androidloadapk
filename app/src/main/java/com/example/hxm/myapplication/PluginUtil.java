@@ -2,6 +2,8 @@ package com.example.hxm.myapplication;
 
 import android.content.Context;
 
+import com.example.lib.IUserService;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,7 +15,7 @@ import dalvik.system.DexClassLoader;
  * Created by August on 2017/3/18.
  */
 public class PluginUtil {
-    private static final String PLUGIN_NAME = "UserPlugin.apk";
+    private static final String PLUGIN_NAME = "testlibrary-debug.apk";
 
     /**
      * 加载插件APP的类 * * @param context * @return * @throws IOException
@@ -36,7 +38,7 @@ public class PluginUtil {
             // 把插件从assets拷贝出来, 如果是从网络下载下来的 那么就可以从下载文件的路径拷贝过来
             DexClassLoader classLoader = new DexClassLoader(src, dest, null, context.getClassLoader());
             // 构造自己的DexClassLoader
-            Class<?> cls = classLoader.loadClass("com.example.userplugin.impl.UserService");
+            Class<?> cls = classLoader.loadClass("com.example.testlibrary.ImplUserService");
             // 加载插件APK中的UserService类
             return (IUserService) cls.newInstance();
         } catch (Exception e) {

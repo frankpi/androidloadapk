@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.lib.IUserService;
+
 import java.io.IOException;
 
 public class MainActivity extends Activity {
@@ -18,7 +20,8 @@ public class MainActivity extends Activity {
     }
 
     public void load(View v) {
-        try { mService = PluginUtil.load(this);
+        try {
+            mService = PluginUtil.load(this);
             if (mService != null) {
                 Toast.makeText(this, "加载插件APP成功", Toast.LENGTH_SHORT).show(); return;
             }

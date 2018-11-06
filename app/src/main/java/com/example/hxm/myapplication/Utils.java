@@ -8,6 +8,8 @@ import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.text.TextUtils;
 
+import com.example.hxm.myapplication.model.PluginApk;
+
 import java.io.File;
 import java.lang.reflect.Method;
 import java.util.HashMap;

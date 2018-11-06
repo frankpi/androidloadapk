@@ -1,4 +1,4 @@
-package com.example.hxm.myapplication;
+package com.example.hxm.myapplication.model;
 
 import android.content.pm.PackageInfo;
 import android.content.res.Resources;
